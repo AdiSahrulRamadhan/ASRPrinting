@@ -62,9 +62,9 @@
             font-size: 1.2rem;
             font-weight: bold;
             color: black;
-            margin-left: -2px;
+            margin-left: -10px;
             position: relative;
-            top: 0px;
+            top: 27px;
             transition: transform 1s ease-in-out;
             display: inline-block;
         }
