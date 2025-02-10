@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASR Printing</title>
+    <title>Global Tranformation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -48,7 +48,7 @@
         }
 
         .logo-container img {
-            width: 80px;
+            width: 200px;
             height: auto;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -372,16 +372,21 @@
         .whatsapp-footer a:hover {
             background-color: #128c7e;
         }
+        .pagesss {
+            background-color: #c6c6c6;
+            font-size: 50px;
+            text-align: center;
+            font-family:'Courier New', Courier, monospace;
+        }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <header class="navbar flex justify-between items-center p-6 bg-opacity-60 bg-blue-200 backdrop-blur-md rounded-lg">
+    <header class="navbar flex justify-between items-center p-10 bg-opacity-60 bg-blue-200 backdrop-blur-md rounded-lg">
         <!-- Logo -->
-        <div class="logo-container flex items-center mb-4 md:mb-0">
+        <div class="logo-container flex items-center mb-10 md:mb-0">
             <img src="{{ asset('images/logo.png') }}" alt="ASR Logo" class="w-20 h-auto">
-            <span class="logo-text font-semibold text-lg ml-2">Printing</span>
         </div>
     
         <!-- Hamburger Icon (Visible on small screens) -->
@@ -391,10 +396,13 @@
     
         <!-- Navbar Links (Visible on larger screens) -->
         <nav id="navbar" class="hidden md:flex space-x-4">
-            <a href="#features" class="text-black hover:text-white px-3 py-2 rounded-lg">Fitur</a>
-            <a href="#products" class="text-black hover:text-white px-3 py-2 rounded-lg">Informasi</a>
-            <a href="#testimony" class="text-black hover:text-white px-3 py-2 rounded-lg">Testimoni</a>
-            <a href="#contact" class="text-black hover:text-white px-3 py-2 rounded-lg">Kontak</a>
+            <a href="{{ route('beranda') }}" class="text-black hover:text-white px-3 py-2 rounded-lg">Beranda</a>
+            <a href="{{ route('profil') }}" class="text-black hover:text-white px-3 py-2 rounded-lg">Profil</a>
+            <a href="{{ route('layanan') }}" class="text-black hover:text-white px-3 py-2 rounded-lg">Layanan</a>
+            <a href="{{ route('informasi') }}" class="text-black hover:text-white px-3 py-2 rounded-lg">Informasi</a>
+            <a href="{{ route('berita') }}" class="text-black hover:text-white px-3 py-2 rounded-lg">Berita</a>
+            <a href="{{ route('galeri') }}" class="text-black hover:text-white px-3 py-2 rounded-lg">Galeri</a>
+            <a href="{{ route('kontak') }}" class="text-black hover:text-white px-3 py-2 rounded-lg">Kontak</a>
         </nav>
     
         <!-- WhatsApp Button -->
@@ -403,14 +411,14 @@
             WhatsApp
         </a>
     </header>    
-
+    
     <!-- Main Section -->
+    <h1 class="pagesss">Halaman Profil</h1>
     <section id="contact" class="container mx-auto mt-12 flex flex-col md:flex-row items-center p-4 poppins-text">
         <div class="md:w-1/2 text-left">
-            <h1 class="main-heading">Percetakan yang Cepat, Rapi, dan Berkualitas</h1>
+            <h1 class="main-heading">PT Quantum HRM Internasional</h1>
             <p class="main-description mt-4">
-                Dengan layanan percetakan yang cepat, rapi, dan berkualitas, setiap detail akan kami wujudkan agar terlihat sempurna.
-                Percayakan kepada kami, karena kepuasan pelanggan adalah prioritas utama.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet dolorum voluptatem perferendis illum distinctio vel laudantium officiis labore. Porro corporis exercitationem fugiat harum? Rem quia ipsum, praesentium animi consequuntur adipisci?
             </p>
             <a href="https://wa.me/081233658802" class="whatsapp-button mt-4 inline-block bg-red-400 text-white px-5 py-2 rounded-full shadow-lg hover:bg-red-500">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-5 h-5 inline-block mr-2">
@@ -418,7 +426,7 @@
             </a>
         </div>
         <div class="md:w-1/2 flex justify-center mt-4 md:mt-0">
-            <img src="{{ asset('images/logoprinter.png') }}" alt="ASRPrinting Logo" class="logoprinter">
+            <img src="{{ asset('images/logo.png') }}" alt="ASRPrinting Logo" class="logoprinter">
         </div>
     </section>
 
@@ -536,30 +544,30 @@
 
     <!-- Testimonial Section -->
     <section id="testimony" class="testimonial-section">
-        <h1 class="testimonial-title">Apa kata mereka tentang ASR Printing?</h1>
+        <h1 class="testimonial-title">Komentar Tentang Hasil Pelayanan Kami</h1>
 
         <div class="testimonial-card">
             <img src="{{ asset('images/profil1.png') }}" alt="Adi" class="testimonial-avatar">
-            <p class="testimonial-text">"ASR Printing sangat membantu saya dalam mencetak tugas kuliah dan skripsi. Hasilnya sangat rapi dan cepat. Terima kasih ASR Printing."</p>
+            <p class="testimonial-text">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam magnam voluptate maiores, quisquam blanditiis suscipit?"</p>
             <p class="testimonial-name">Adi</p>
         </div>
 
         <div class="testimonial-card">
             <img src="{{ asset('images/profil1.png') }}" alt="Sahrul" class="testimonial-avatar">
-            <p class="testimonial-text">"Sangat puas dengan hasil cetakan dari ASR Printing. Cepat, rapi, dan harga yang terjangkau. Terima kasih ASR Printing."</p>
+            <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate deserunt doloremque dolorum sapiente, veniam consequatur!"</p>
             <p class="testimonial-name">Sahrul</p>
         </div>
 
         <div class="testimonial-card">
             <img src="{{ asset('images/profil1.png') }}" alt="Ramadhan" class="testimonial-avatar">
-            <p class="testimonial-text">"Layanannya sangat memuaskan. Hasil cetakannya sangat rapi dan harga yang terjangkau. Terima kasih ASR Printing."</p>
+            <p class="testimonial-text">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus consequatur, at voluptas animi libero id!"</p>
             <p class="testimonial-name">Ramadhan</p>
         </div>
     </section>
 
     <!-- WhatsApp Footer -->
     <section class="whatsapp-footer">
-        <a href="https://wa.me/081233658802">Informasi lebih lanjut, hubungi WhatsApp.</a>
+        <a href="https://wa.me/081233658802">Informasi lebih lanjut, Hubungi Kami.</a>
     </section>
     <!-- Footer Section -->
 <footer style="background-color: #1a1a1a; color: white; padding: 40px 20px;">
